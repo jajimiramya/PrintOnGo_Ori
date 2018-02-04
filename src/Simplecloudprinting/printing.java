@@ -19,7 +19,7 @@ public class printing
 		keywords key=new keywords();
 		
 		ArrayList a=new ArrayList();
-		FileInputStream file=new FileInputStream("G:\\Ramya\\workspace2\\PrintOnGo\\src\\testcases\\printing.xlsx");
+		FileInputStream file=new FileInputStream("G:\\Ramya\\workspace2\\PrintOnGo_Ori\\src\\testcases\\printing.xlsx");
 		XSSFWorkbook wbks=new XSSFWorkbook(file);
 		Sheet s= wbks.getSheet("Teststeps");
 		Iterator itr = s.iterator();

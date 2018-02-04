@@ -24,7 +24,7 @@ public class keywords
 	driver=new 	FirefoxDriver();
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
-	 file=new FileInputStream("G:\\Ramya\\workspace2\\PrintOnGo\\src\\objectrepository\\objectrepository.properties");
+	 file=new FileInputStream("G:\\Ramya\\workspace2\\PrintOnGo_Ori\\src\\objectrepository\\objectrepository.properties");
 	 prop=new Properties();
 	prop.load(file);
 	}
