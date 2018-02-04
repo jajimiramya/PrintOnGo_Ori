@@ -19,7 +19,12 @@ public class printing
 		keywords key=new keywords();
 		
 		ArrayList a=new ArrayList();
-		FileInputStream file=new FileInputStream("G:\\Ramya\\workspace2\\PrintOnGo_Ori\\src\\testcases\\printing.xlsx");
+		String x=System.getProperty("user.dir");
+		System.out.println("Working Directory = " + x);
+	    
+		String str2="\\src\\testcases\\printing.xlsx";
+		String str3=x+str2;
+		FileInputStream file=new FileInputStream(str3);
 		XSSFWorkbook wbks=new XSSFWorkbook(file);
 		Sheet s= wbks.getSheet("Teststeps");
 		Iterator itr = s.iterator();

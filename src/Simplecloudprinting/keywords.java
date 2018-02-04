@@ -24,7 +24,11 @@ public class keywords
 	driver=new 	FirefoxDriver();
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
-	 file=new FileInputStream("G:\\Ramya\\workspace2\\PrintOnGo_Ori\\src\\objectrepository\\objectrepository.properties");
+	String dir_path=System.getProperty("user.dir");
+	System.out.println("Working Directory = " + dir_path);
+   	String str2="\\src\\objectrepository\\objectrepository.properties";
+	String str3=dir_path+str2;
+	FileInputStream file=new FileInputStream(str3);
 	 prop=new Properties();
 	prop.load(file);
 	}
