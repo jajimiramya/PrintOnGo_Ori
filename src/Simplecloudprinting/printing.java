@@ -14,15 +14,14 @@ import org.apache.xpath.compiler.Keywords;
 
 public class printing
 {
-	public static void main(String[] args) throws IOException, AWTException 
+	public static void main(String[] args) throws IOException, AWTException, InterruptedException 
 	{
 		keywords key=new keywords();
-		
+		gmail g =new gmail();
 		ArrayList a=new ArrayList();
 		String x=System.getProperty("user.dir");
 		System.out.println("Working Directory = " + x);
-	    
-		String str2="\\src\\testcases\\printing.xlsx";
+	    String str2="\\src\\testcases\\printing.xlsx";
 		String str3=x+str2;
 		FileInputStream file=new FileInputStream(str3);
 		XSSFWorkbook wbks=new XSSFWorkbook(file);
@@ -128,10 +127,41 @@ public class printing
 				key.select(data);
 			    }
 			}
-			
-			
-              }
+			if (a.get(i).equals("gmail_account")) 
+			{
+				String keyword=(String)a.get(i);
+				String data=(String)a.get(i+1);
+				String objectname=(String)a.get(i+2);
+				String runmode=(String)a.get(i+3);
+				System.out.println(keyword);
+				System.out.println(data);
+				System.out.println(objectname);
+				System.out.println(runmode);
+				if(runmode.equals("yes"))
+				{
+				g.gmail_account();
+				}
+			}
+			if (a.get(i).equals("store")) 
+			{
+				String keyword=(String)a.get(i);
+				String data=(String)a.get(i+1);
+				String objectname=(String)a.get(i+2);
+				String runmode=(String)a.get(i+3);
+				System.out.println(keyword);
+				System.out.println(data);
+				System.out.println(objectname);
+				System.out.println(runmode);
+				if(runmode.equals("yes"))
+				{
+				String result=g.store();
+				System.out.println(result);
+			  }
+			}
+	  
+        }
 	}
 }
+
 			
 			

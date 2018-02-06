@@ -35,7 +35,6 @@ public class keywords
 	public void navigate(String data) 
 	{
 	driver.get(data);
-		
 	}
 	public void click(String objectname) 
 	{
@@ -46,7 +45,7 @@ public class keywords
 		driver.findElement(By.xpath(prop.getProperty(objectname))).sendKeys(data);	
 		
 	}
-	public void select(String data) throws AWTException 
+	public void select(String data) throws AWTException, InterruptedException 
 	{
 		StringSelection selection=new StringSelection(data);
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(selection, null);
@@ -55,8 +54,24 @@ public class keywords
 		robot.keyPress(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_V);
+		Thread.sleep(20000);
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
+		Thread.sleep(20000);
 	}
+ 		/*public String store()
+		{
+			String Z= (String)driver.findElement(By.xpath("//*[@id='Upload_txt_UploadSuccess5']")).getText();
+			String result = Z.replaceAll("[^0-9]", "");
+			return result;
+			
+		}*/
+		
 	}
+	
+	
+	
+
+		
+	
 
