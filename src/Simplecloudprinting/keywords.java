@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -59,15 +60,15 @@ public class keywords
 		robot.keyRelease(KeyEvent.VK_ENTER);
 		Thread.sleep(20000);
 	}
- 		/*public String store()
-		{
-			String Z= (String)driver.findElement(By.xpath("//*[@id='Upload_txt_UploadSuccess5']")).getText();
-			String result = Z.replaceAll("[^0-9]", "");
-			return result;
-			
-		}*/
+	public String store()
+	{
+		String Z= (String)driver.findElement(By.xpath("//*[@id='Upload_txt_UploadSuccess5']")).getText();
+		String result = Z.replaceAll("[^0-9]", "");
+		System.out.println(result);
+		return result;
 		
 	}
+ 	}
 	
 	
 	

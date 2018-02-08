@@ -1,5 +1,4 @@
 package Simplecloudprinting;
-
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
@@ -11,6 +10,7 @@ public class gmail
   public void gmail_account() 
  {
 	FirefoxDriver driver=new FirefoxDriver();
+	keywords key=new keywords();
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 	driver.get("https://www.gmail.com");
@@ -23,25 +23,30 @@ public class gmail
 	int rows_count=rows_table.size();
 	for(int row=0;row<rows_count;row++)
 	{
-		String id="0";
 		List < WebElement > Columns_row = rows_table.get(row).findElements(By.tagName("td"));
  	    int columns_count = Columns_row.size();
 	 	int column = 5;
 	    String celtext = Columns_row.get(column).getText();
 	 	String text=celtext.substring(celtext.indexOf(":")+1);
 	    String splited[] = text.split(" ");
-	   System.out.println(splited[1]);
-	   String docid=splited[1];
-	   }	
-}
-	public String store()
-	{
-		String Z= (String)driver.findElement(By.xpath("//*[@id='Upload_txt_UploadSuccess5']")).getText();
-		String result = Z.replaceAll("[^0-9]", "");
-		return result;		
+		System.out.println(splited[1]);
+	    String docid=splited[1];
+	    String docid_gmail = key.store();
+	    if(docid.equals(docid_gmail))
+	    		{	
+	    			System.out.println("found the doc-id");
+	    			break;
+	    		}	
+	}
+
+	 
+ }
+		
+		
 	}	
 	
-}
+	
+
 
 
 

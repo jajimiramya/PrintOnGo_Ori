@@ -10,12 +10,13 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.apache.xpath.compiler.Keywords;
+import org.junit.Test;
 
 public class printing
 {
-	public static void main(String[] args) throws IOException, AWTException, InterruptedException 
-	{
+	@Test
+	public void test1() throws IOException, AWTException, InterruptedException
+	 {
 		keywords key=new keywords();
 		gmail g =new gmail();
 		ArrayList a=new ArrayList();
@@ -154,9 +155,9 @@ public class printing
 				System.out.println(runmode);
 				if(runmode.equals("yes"))
 				{
-				String result=g.store();
-				System.out.println(result);
-			  }
+			   String result= key.store();
+			   System.out.println(result);
+				}
 			}
 	  
         }
