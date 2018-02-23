@@ -29,7 +29,7 @@ public class gmail
 	    String celtext = Columns_row.get(column).getText();
 	 	String text=celtext.substring(celtext.indexOf(":")+1);
 	    String splited[] = text.split(" ");
-		System.out.println(splited[1]);
+		//System.out.println(splited[1]);
 	    String docid=splited[1];
 	    String docid_gmail = key.store();
 	    if(docid.equals(docid_gmail))

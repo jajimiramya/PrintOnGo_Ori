@@ -5,13 +5,12 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
-
+import junit.framework.Assert;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Test;
-
 public class printing
 {
 	@Test
@@ -59,10 +58,10 @@ public class printing
 				String data=(String)a.get(i+1);
 				String objectname=(String)a.get(i+2);
 				String runmode=(String)a.get(i+3);
-				System.out.println(keyword);
-				System.out.println(data);
-				System.out.println(objectname);
-				System.out.println(runmode);
+//				System.out.println(keyword);
+//				System.out.println(data);
+//				System.out.println(objectname);
+//				System.out.println(runmode);
 				if(runmode.equals("yes"))
 				{
 				key.openbrowser();
@@ -74,13 +73,13 @@ public class printing
 				String data=(String)a.get(i+1);
 				String objectname=(String)a.get(i+2);
 				String runmode=(String)a.get(i+3);
-				System.out.println(keyword);
-				System.out.println(data);
-				System.out.println(objectname);
-				System.out.println(runmode);
+//				System.out.println(keyword);
+//				System.out.println(data);
+//				System.out.println(objectname);
+//				System.out.println(runmode);
 				if(runmode.equals("yes"))
 				{
-				key.navigate(data);
+				key.navigate(data);				
 			    }
 			}
 			if (a.get(i).equals("click")) 
@@ -89,10 +88,10 @@ public class printing
 				String data=(String)a.get(i+1);
 				String objectname=(String)a.get(i+2);
 				String runmode=(String)a.get(i+3);
-				System.out.println(keyword);
-				System.out.println(data);
-				System.out.println(objectname);
-				System.out.println(runmode);
+//				System.out.println(keyword);
+//				System.out.println(data);
+//				System.out.println(objectname);
+//				System.out.println(runmode);
 				if(runmode.equals("yes"))
 				{
 				key.click(objectname);
@@ -104,10 +103,10 @@ public class printing
 				String data=(String)a.get(i+1);
 				String objectname=(String)a.get(i+2);
 				String runmode=(String)a.get(i+3);
-				System.out.println(keyword);
-				System.out.println(data);
-				System.out.println(objectname);
-				System.out.println(runmode);
+//				System.out.println(keyword);
+//				System.out.println(data);
+//				System.out.println(objectname);
+//				System.out.println(runmode);
 				if(runmode.equals("yes"))
 				{
 					key.input(data,objectname);
@@ -119,10 +118,10 @@ public class printing
 				String data=(String)a.get(i+1);
 				String objectname=(String)a.get(i+2);
 				String runmode=(String)a.get(i+3);
-				System.out.println(keyword);
-				System.out.println(data);
-				System.out.println(objectname);
-				System.out.println(runmode);
+//				System.out.println(keyword);
+//				System.out.println(data);
+//				System.out.println(objectname);
+//				System.out.println(runmode);
 				if(runmode.equals("yes"))
 				{
 				key.select(data);
@@ -134,10 +133,10 @@ public class printing
 				String data=(String)a.get(i+1);
 				String objectname=(String)a.get(i+2);
 				String runmode=(String)a.get(i+3);
-				System.out.println(keyword);
-				System.out.println(data);
-				System.out.println(objectname);
-				System.out.println(runmode);
+//				System.out.println(keyword);
+//				System.out.println(data);
+//				System.out.println(objectname);
+//				System.out.println(runmode);
 				if(runmode.equals("yes"))
 				{
 				g.gmail_account();
@@ -149,20 +148,38 @@ public class printing
 				String data=(String)a.get(i+1);
 				String objectname=(String)a.get(i+2);
 				String runmode=(String)a.get(i+3);
-				System.out.println(keyword);
-				System.out.println(data);
-				System.out.println(objectname);
-				System.out.println(runmode);
+//				System.out.println(keyword);
+//				System.out.println(data);
+//				System.out.println(objectname);
+//				System.out.println(runmode);
 				if(runmode.equals("yes"))
 				{
 			   String result= key.store();
 			   System.out.println(result);
 				}
 			}
+//         	if (a.get(i).equals("verifyeditbox")) 
+//			{
+//				String keyword=(String)a.get(i);
+//				String data=(String)a.get(i+1);
+//				String objectname=(String)a.get(i+2);
+//				String runmode=(String)a.get(i+3);
+//				System.out.println(keyword);
+//				System.out.println(data);
+//				System.out.println(objectname);
+//				System.out.println(runmode);
+//				if(runmode.equals("yes"))
+//				{
+//					String actulavalue=key.verifyeditbox(objectname);
+//					System.out.println(data);
+//					Assert.assertEquals(data, actulavalue);
+//			    }
+//			}
+              }
+            		}
+            }
 	  
-        }
-	}
-}
+       
 
 			
 			

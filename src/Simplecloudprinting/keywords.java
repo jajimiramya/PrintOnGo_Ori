@@ -11,8 +11,10 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.AfterTest;
 
 public class keywords 
 {
@@ -25,12 +27,11 @@ public class keywords
 	driver=new 	FirefoxDriver();
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
-	String dir_path=System.getProperty("user.dir");
-	System.out.println("Working Directory = " + dir_path);
+    String dir_path=System.getProperty("user.dir");
    	String str2="\\src\\objectrepository\\objectrepository.properties";
 	String str3=dir_path+str2;
 	FileInputStream file=new FileInputStream(str3);
-	 prop=new Properties();
+	prop=new Properties();
 	prop.load(file);
 	}
 	public void navigate(String data) 
@@ -64,10 +65,19 @@ public class keywords
 	{
 		String Z= (String)driver.findElement(By.xpath("//*[@id='Upload_txt_UploadSuccess5']")).getText();
 		String result = Z.replaceAll("[^0-9]", "");
-		System.out.println(result);
+		//System.out.println(result);
 		return result;
 		
 	}
+//	public String verifyeditbox(String objectname) 
+//	{
+//		String actulavalue=driver.findElement(By.xpath(prop.getProperty(objectname))).getAttribute("value");
+//		System.out.println(actulavalue);
+//		return actulavalue;
+//		
+//		
+//		
+//	}
  	}
 	
 	

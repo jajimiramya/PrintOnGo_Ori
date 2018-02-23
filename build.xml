@@ -8,10 +8,10 @@
     <property environment="env"/>
 
     <property name="ws.home" value="${basedir}"/>
-	<property name="ws.jars" value="G:\Ramya\jars_webdriver_junit_datadriven"/>
+	<property name="ws.jars" value="D:\jars_webdriver_junit_datadriven"/>
     <property name="test.dest" value="${ws.home}/build"/>
     <property name="test.src" value="${ws.home}/src"/>
-	<property name="test.reportsDir" value="G:/Ramya/workspace2/PrintOnGo_Ori/rep"/>
+	<property name="test.reportsDir" value="C:/rep1"/>
 
 	
 
@@ -111,10 +111,10 @@
 			    <batchtest  todir="${test.reportsDir}" fork="true">  
 			    <fileset dir="${test.dest}">  
 			       
-			        <include name="Simplecloudprinting/printing.class" />
-			    	<!--include name="Simplecloudprinting/keywords.class"/-->
-			        <!--include name="Simplecloudprinting/gmail.class" /-->
-			    	<!--include name="tests/suite1/FirstSuiteRunner.class" /-->
+			        <include name=
+			        	"Simplecloudprinting/printing.class" />
+			    	<!--include name="testscript/ExecuteContactTest.class"/-->
+			        <!--include name="tests/suite1/FirstSuiteRunner.class" /-->
 
 			         
 			    </fileset>  
